@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function TodoPage() {
   const [itemName, setItemName] = useState("");
   const [itemDescription, setItemDescription] = useState("");
+  const [itemId, setItemId] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,6 +34,14 @@ export default function TodoPage() {
           onChange={(e) => setItemDescription(e.target.value)}
           required
         />
+        <div>
+          <label>Item ID:</label>
+          <input
+            type="text"
+            value={itemId}
+            onChange={(e) => setItemId(e.target.value)}
+          />
+        </div>
         <button type="submit">Add Item</button>
       </form>
     </div>
