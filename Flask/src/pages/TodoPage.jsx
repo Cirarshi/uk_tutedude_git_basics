@@ -5,6 +5,7 @@ export default function TodoPage() {
   const [itemName, setItemName] = useState("");
   const [itemDescription, setItemDescription] = useState("");
   const [itemId, setItemId] = useState("");
+  const [itemUuid, setItemUuid] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,6 +41,14 @@ export default function TodoPage() {
             type="text"
             value={itemId}
             onChange={(e) => setItemId(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Item UUID:</label>
+          <input
+            type="text"
+            value={itemUuid}
+            onChange={(e) => setItemUuid(e.target.value)}
           />
         </div>
         <button type="submit">Add Item</button>
